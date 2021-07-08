@@ -8,23 +8,109 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{% static 'OpnEco/css/style.css' %}">
     <title>Home - OpnEco</title>
   </head>
   <style>
-    body{
-        background:  url("{% static 'global/media/bg.jpg' %}")
-    }
+    <style>
+	li a {
+  color: green;
+}
+body {
+  background-color:#111;
+  color:white;
+font-family: 'Bona Nova', serif;
+
+    /* no-repeat !important; */
+}
+
+/* #text{
+  width: 70%;
+  align-items: center;
+} */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  font-weight:550;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.05s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  transform: scale(1.05)
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
     .grid {
     margin: 15px; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     align-items: fill;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
     /* overflow: hidden; */
     }
     .grid > article {
     border: 1px solid #ccc;
+    border-radius:5%;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     }
     .grid > article img {
@@ -43,8 +129,8 @@
     #typewrite1{ 
         text-decoration: none;
         align-items: center;
-        color: red;
-        font-family: monospace;
+        color:#04AA6D;
+    
         font-size: 40px;
     }
 </style>
@@ -107,6 +193,18 @@
     };
 </script>
   <body>
+  <div class="topnav" id="myTopnav">
+  <a href="" class="active">Home</a>
+  <a href="emo/">OpnEmo</a>
+  <a href="insights/">OpnInsights</a>
+  <a href="keywords/">OpnKeywords</a>
+  <a href="settings/">Settings</a>
+  <a href="about/">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<br>
     <br>
     <!-- <h1>Hello there! Welcome to OpnEco</h1> -->
     <h1 align="center">
@@ -116,7 +214,7 @@
     </h1>
     <br>
     <br>
-    <h2 align="center">Where to go from here?</h2>
+    <h3 align="center" style="color:gray">Where to go from here?</h3>
     <br>
     <br>
     <style>
@@ -125,8 +223,8 @@
             overflow: hidden;
         }
         article:hover{
-            background-color: orange;
-            transform: scale(1.05);
+            background-color: #282828;
+            transform: scale(1.02);
         }
         a{
             text-decoration: none;
@@ -140,7 +238,7 @@
             overflow: hidden;
         }
         button:hover{
-            background-color: rgb(2, 111, 236);
+            background-color: #04AA6D;/*rgb(2, 111, 236);*/
             transform: scale(1.05);
             font-color: white;
         }
@@ -155,7 +253,7 @@
     <article>
         <center><img src="{% static 'OpnEco/media/OpnEmo-card-img.svg' %}" alt="OpnEco" class="card-img" align="center"></center>
         <div class="text">
-        <h3>OpnEmo</h3>
+        <h3 style="text-align:center;padding:2%;color:gray;color:#04AA6D">OpnEmo</h3>
         <p>Want to know how your readers will find your content to read? OpnEmo has got you covered.</p>
         <button><a href="emo/"><div>Let's Go</div></a></button>
         </div>
@@ -163,21 +261,23 @@
     <article>
         <center><img src="{% static 'OpnEco/media/OpnInsights-card-img2.svg' %}" alt="OpnInsights" class="card-img" align="center"></center>
         <div class="text">
-        <h3>OpnInsights</h3>
+        <h3 style="text-align:center;padding:2%;color:gray;color:#04AA6D">OpnInsights*</h3>
         <p>Stuck between choosing topics to target next to boost your audience? Try OpnInsights.</p>
         <button><a href="insights/"><div>Let's Go</div></a></button>
         </div>
     </article>
     <article>
-        <center><img src="{% static 'OpnEco/media/OpnKeywords-card-img2.svg' %}" alt="OpnKeywords" class="card-img"></center>
+        <center><img src="{% static 'OpnEco/media/OpnKeywords-card-img.svg' %}" alt="OpnKeywords" class="card-img"></center>
         <div class="text">
-        <h3>OpnKeywords</h3>
+        <h3 style="text-align:center;padding:2%;color:gray;color:#04AA6D">OpnKeywords</h3>
         <p>Puzzled between choosing keywords to target for your content? OpnKeywords can help.</p>
         <button><a href="keywords/"><div>Let's Go</div></a></button>
         </div>
     </article>
     </main>
-
+    <p align="right">
+        * : Requires Internet Access.
+    </p>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
