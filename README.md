@@ -7,7 +7,7 @@
 
 We all have been there, haven't we?
 
-OpnEco is a Python3 project developed just for that. To be a constant companion throughout your content writing process. By a content writer, for content writers.
+OpnEco is a Python3 project developed just for that. To be a constant companion throughout your content writing process. By content writers, for content writers.
 
 ## Salient features:
 
@@ -25,3 +25,4 @@ OpnEco doesn't require any installation. You can simply download, resolve its de
 2. Run init.py using ```python init.py``` (or ```python3 init.py``` if you have two versions of Python installed.)
 3. Run manage.py using ```python manage.py runserver``` (or ```python3 manage.py runserver``` if you have two versions of Python installed.)
 
+Made by [Anuran](https://github.com/anuran-roy) and [Tisha](https://github.com/tishachawla-jg) with 💙
