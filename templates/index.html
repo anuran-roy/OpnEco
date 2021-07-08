@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,18 +8,20 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{% static 'OpnEco/css/style.css' %}">
     <title>Home - OpnEco</title>
   </head>
   <style>
     body{
         background:  url("https://wallpaperaccess.com/full/2842066.jpg")
     }
-    .grid { 
+    .grid {
+    margin: 15px; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    align-items: stretch;
+    align-items: fill;
+    /* overflow: hidden; */
     }
     .grid > article {
     border: 1px solid #ccc;
@@ -105,7 +108,6 @@
 </script>
   <body>
     <br>
-    <br>
     <!-- <h1>Hello there! Welcome to OpnEco</h1> -->
     <h1 align="center">
         <a href="" class="typewrite" data-period="2000" data-type='[ "Hey there!", "Welcome to OpnEco.", "Analyze your content using the various tools.", "It is 100% free!" ]' id="typewrite1">
@@ -120,6 +122,7 @@
     <style>
         article{
             transition: 0.3s;
+            overflow: hidden;
         }
         article:hover{
             background-color: orange;
@@ -141,33 +144,35 @@
             transform: scale(1.05);
             font-color: white;
         }
+        .card-img{
+            margin: 10px; /*top 10px left 10px bottom 10px right;*/
+            height: 300px;
+            width: 300px;
+        }
         
     </style>
     <main class="grid">
     <article>
-        <img src="https://miro.medium.com/max/1838/1*QbnbVSRoAyqLG76ZtF-oew.png" alt="OpnEco">
+        <center><img src="{% static 'OpnEco/media/OpnEmo-card-img.svg' %}" alt="OpnEco" class="card-img" align="center"></center>
         <div class="text">
-        <br>
         <h3>OpnEmo</h3>
-        <p>Want to know how your readers will find your content to read? Use OpnEmo.</p>
+        <p>Want to know how your readers will find your content to read? OpnEmo has got you covered.</p>
         <button><a href="emo/"><div>Let's Go</div></a></button>
         </div>
     </article>
     <article>
-        <img src="https://img.freepik.com/free-vector/business-team-doing-lightbulb-from-jigsaw-puzzle-rising-arrow-creative-idea-insight-notion-invention-concept_335657-163.jpg" alt="OpnInsights">
+        <center><img src="{% static 'OpnEco/media/OpnInsights-card-img2.svg' %}" alt="OpnInsights" class="card-img" align="center"></center>
         <div class="text">
-        <br>
         <h3>OpnInsights</h3>
         <p>Stuck between choosing topics to target next to boost your audience? Try OpnInsights.</p>
         <button><a href="insights/"><div>Let's Go</div></a></button>
         </div>
     </article>
     <article>
-        <img src="https://ithemes.com/wp-content/uploads/2020/06/undraw_web_search_eetr-1.png" alt="OpnKeywords">
+        <center><img src="{% static 'OpnEco/media/OpnKeywords-card-img2.svg' %}" alt="OpnKeywords" class="card-img"></center>
         <div class="text">
-        <br>
         <h3>OpnKeywords</h3>
-        <p>Puzzled between choosing keywords for your content? OpnKeywords can help.</p>
+        <p>Puzzled between choosing keywords to target for your content? OpnKeywords can help.</p>
         <button><a href="keywords/"><div>Let's Go</div></a></button>
         </div>
     </article>

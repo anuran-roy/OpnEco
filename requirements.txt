@@ -20,5 +20,6 @@ six==1.16.0
 sqlparse==0.4.1
 tenacity==7.0.0
 text2emotion==0.0.5
+textblob==0.15.3
 tqdm==4.61.2
 urllib3==1.26.6

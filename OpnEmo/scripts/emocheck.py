@@ -10,8 +10,6 @@ from textblob import TextBlob as tb
 from textblob.sentiments import NaiveBayesAnalyzer
 import plotly.express as px
 import plotly
-import seaborn as sns
-import matplotlib.pyplot as plt
 import pandas as pd
 import text2emotion as te
 import os

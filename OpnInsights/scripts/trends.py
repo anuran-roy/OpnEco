@@ -1,9 +1,9 @@
 from pytrends.request import TrendReq as tr
 import plotly.express as px
 import pandas as pd
-import seaborn as sns
+# import seaborn as sns
 import plotly
-import kaleido
+# import kaleido
 print("Setup complete")
 
 class Trends:
