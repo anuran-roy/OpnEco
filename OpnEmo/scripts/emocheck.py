@@ -5,7 +5,7 @@
 # ## Importing necessary tools
 
 import nltk
-nltk.download('movie_reviews')
+# nltk.download('movie_reviews')
 from textblob import TextBlob as tb
 from textblob.sentiments import NaiveBayesAnalyzer
 import plotly.express as px
