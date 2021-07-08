@@ -7,6 +7,9 @@ import plotly
 
 
 class Keywords:
+    keynum = 0
+    def __init__(self, num):
+        self.keynum = num
 
     def deEmojify(self, text):
         regrex_pattern = re.compile(pattern = "["
@@ -48,7 +51,10 @@ class Keywords:
         df.describe()
         col=df.columns
         df=df.transpose()
-        headd=df.head(8)
+        headd=df.head(self.keynum) if self.keynum < len(df) else df
+
+        if self.keynum == 0:
+            headd = df
 
         fig = px.line(headd)
 
@@ -56,8 +62,8 @@ class Keywords:
 
         return graph_div
 
-def execute(text):
-    ob = Keywords()
+def execute(kn, text):
+    ob = Keywords(kn)
     op = ob.getKeywords(text)
 
     return op

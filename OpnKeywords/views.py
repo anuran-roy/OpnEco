@@ -7,6 +7,12 @@ def index(request):
 
 def analyze(request):
     data = request.POST.get('toAnalyze', 'default')
-    op = keywords.execute(data)
+    knum = request.POST.get('numKeywords', 'default')
+
+    try:
+        knum = int(knum)
+    except:
+        knum = 10
+    op = keywords.execute(knum, data)
 
     return render(request, 'OpnKeywords/results.html', {'fig': op})
