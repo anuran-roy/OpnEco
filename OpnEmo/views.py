@@ -11,7 +11,7 @@ def analyze(request):
 
     return render(request, 'OpnEmo/results.html', {
         'val': op[0],
-        'fig1': op[1],
-        'fig2': op[2],
-        'fig3': op[3],
+        # 'fig1': op[1],
+        'fig2': op[1], #op[2],
+        'fig3': op[2], #op[3],
         })

@@ -33,7 +33,7 @@ class Keywords:
                     cword2=cword.lower()
                     cwlist.append(cword2)
         
-        symbols='!@#$%^&*()_+-={}|[]\:";<>?,./'
+        symbols = u'!@#$%^&*()_+-=|[]\:";<>?,./'
         
         for word in text.split(" "):
             worde=self.deEmojify(word)
@@ -56,11 +56,15 @@ class Keywords:
         if self.keynum == 0:
             headd = df
 
-        fig = px.line(headd)
+        pt = px.line(headd)
+        pt.update_layout({
+            'plot_bgcolor': 'rgba(51, 51, 51, 1)',
+            'paper_bgcolor': 'rgba(51, 51, 51, 1)',
+            }, showlegend=False, font_color="white",)
+        pt.update_traces(line_color='#04aa6d')
+        fig = plotly.offline.plot(pt, include_plotlyjs=True, output_type='div')
 
-        graph_div = plotly.offline.plot(fig, include_plotlyjs=True, output_type='div')
-
-        return graph_div
+        return fig
 
 def execute(kn, text):
     ob = Keywords(kn)

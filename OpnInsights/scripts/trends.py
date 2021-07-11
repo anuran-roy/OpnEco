@@ -36,13 +36,17 @@ class Trends:
             col = list(df.columns)
 
             pt = px.line(df, x=df.index, y = col)# ["Data Science", "Web Development", "Ethical Hacking", "Cybersecurity"])
+            pt.update_layout({
+                        'plot_bgcolor': 'rgba(51, 51, 51, 1)',
+                        'paper_bgcolor': 'rgba(51, 51, 51, 1)',
+                    }, font_color="white",)            
             # pt.show()
             fig = plotly.offline.plot(pt, include_plotlyjs=True, output_type='div')
 
             return [fig, df]
 
         except Exception as e:
-            return [f"<h1>An error was encountered. Error log: {e}</h1>", None]
+            return [f"<h1>An error was encountered</h1>. <p>Error log: {e}</p>", None]
 
 def execute(text):
     ob = Trends()

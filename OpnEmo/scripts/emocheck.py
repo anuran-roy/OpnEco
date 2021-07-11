@@ -69,12 +69,18 @@ class Checker:
         # pt=sns.scatterplot(y=sent,x=senc)
         # pt.set(ylabel='Emotion score',xlabel='Sentence number')
 
-        pt1 = px.scatter(x = senc, y = sent, labels={
-            "x": "Sentence number",
-            "y": "emotion score"
-        })
+        # pt1 = px.scatter(x = senc, y = sent, labels={
+        #     "x": "Sentence number",
+        #     "y": "emotion score"
+        # }, color=sent, color_continuous_scale=px.colors.sequential.Viridis)
 
-        fig1 = plotly.offline.plot(pt1, include_plotlyjs=True, output_type='div')        
+        # pt1.update_layout({
+        #     'plot_bgcolor': 'rgba(51, 51, 51, 1)',
+        #     'paper_bgcolor': 'rgba(51, 51, 51, 1)',
+        #     }, showlegend=False, font_color="white",)
+        # # pt.update_traces(line_color='#04aa6d')
+
+        # fig1 = plotly.offline.plot(pt1, include_plotlyjs=True, output_type='div')        
 
         # pt1=sns.lineplot(y=sent,x=senc)
         # pt1.set(ylabel='Emotion score',xlabel='Sentence number')
@@ -83,6 +89,18 @@ class Checker:
             "x": "Sentence number",
             "y": "emotion score"
         })
+
+        pt2.update_layout({
+            'plot_bgcolor': 'rgba(51, 51, 51, 1)',
+            'paper_bgcolor': 'rgba(51, 51, 51, 1)',
+            }, showlegend=False, font_color="white", title={
+                'text': 'Sentence wise emotional score plot',
+                'y':0.95,
+                'x':0.5,
+                'xanchor': 'center',
+                'yanchor': 'top'
+            })
+        pt2.update_traces(line_color='#04aa6d')
 
         fig2 = plotly.offline.plot(pt2, include_plotlyjs=True, output_type='div')        
 
@@ -124,10 +142,19 @@ class Checker:
         vals=[100*float(x) for x in list(emodict.values())]
 
         pt3 = px.bar(x = keys, y = vals, labels={
-            "x": "<-------Emotion------->",
-            "y": "Percentage----->"
+            "x": "Emotion",
+            "y": "Percentage"
         })
 
+        pt3.update_layout({
+            'plot_bgcolor': 'rgba(51, 51, 51, 1)',
+            'paper_bgcolor': 'rgba(51, 51, 51, 1)',
+            }, showlegend=False, font_color="white", title={'text':'Overall content emotions.',
+            'y':0.95,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top'})
+        # pt3.update_traces(line_color='#04aa6d')
 
         fig3 = plotly.offline.plot(pt3, include_plotlyjs=True, output_type='div')        
 
@@ -138,7 +165,7 @@ class Checker:
         s += f"'Tone': {round(emodict['Tone'],4)*100}%\n"
         s += "}"
         
-        return [s, fig1, fig2, fig3]
+        return [s, fig2, fig3]
 
 def execute(toAnalyze):
     ob = Checker()

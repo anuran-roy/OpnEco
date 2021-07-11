@@ -1,0 +1,9 @@
+.plot{
+    margin: 20px;
+    transition: 0.3s;
+    border-radius: 5%;
+    background-color: rgb(51, 51, 51);
+}
+.plot:hover{
+    transform: scale(1.01);
+}
