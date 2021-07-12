@@ -34,19 +34,21 @@
     </div>
     <h1 align="center" style="padding:3%;color:#04AA6D; font-family: 'Bona Nova', serif;">Analyze your text with OpnKeywords keywords checker.</h1>
     <br>
+    <center>
     <div>
       <form action='results/' method='POST'> {% csrf_token %}
         <div class="form-group">
-          <textarea class="form-control" placeholder="Enter number of keywords" id="floatingTextarea1" name="numKeywords" style="overflow: hidden;width:300px;height:50px;border-radius:0%;background-color:#282828;color:white""></textarea>
+          <textarea class="form-control smallinput-opneco rounded" placeholder="Enter number of keywords" id="floatingTextarea1" name="numKeywords"></textarea>
         </div>
         <br>  
         <div class="form-group mb-3">  
-          <textarea class="form-control" placeholder="Enter your content here..." id="floatingTextarea2" name="toAnalyze" style="overflow: hidden;height:400px;border-radius:0%;background-color:#282828;color:white""></textarea>
+          <textarea class="form-control textarea-opneco rounded" placeholder="Enter your content here..." id="floatingTextarea2" name="toAnalyze"></textarea>
           <br>
           <center><button type="submit" class="btn btn-outline-success" style="width:200px;height:80px;font-size:x-large;">Submit</button></center>
         </div>
       </form>
     </div>
+    </center>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

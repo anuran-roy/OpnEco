@@ -31,3 +31,32 @@ width: 100%;
     color:#04AA6D;
     font-size: 40px;
 }
+article{
+    transition: 0.3s;
+    overflow: hidden;
+}
+article:hover{
+    background-color: #282828;
+    transform: scale(1.02);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: white;
+}
+button{
+    transition: 0.3s;
+    overflow: hidden;
+}
+button:hover{
+    background-color: #04AA6D;/*rgb(2, 111, 236);*/
+    transform: scale(1.05);
+    font-color: white;
+}
+.card-img{
+    margin: 10px; /*top 10px left 10px bottom 10px right;*/
+    height: 300px;
+    width: 300px;
+}

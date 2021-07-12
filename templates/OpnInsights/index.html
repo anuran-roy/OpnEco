@@ -44,17 +44,18 @@
       </ol>
     </p>
     <br>
-    <div class="form-floating">
+    <center>
+    <div>
       <form action='results/' method='POST'> {% csrf_token %}
-        <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="toAnalyze" style="height:400px;border-radius:0%;background-color:#282828;color:white""></textarea>
-          <label for="floatingTextarea2">Enter keywords to lookup for:</label>
+        <div class="form-group mb-3">
+          <textarea class="form-control textarea-opneco rounded" placeholder="Enter keywords to lookup for" id="floatingTextarea2" name="toAnalyze"></textarea>
           <br>
            <br>
            <center><button type="submit" class="btn btn-outline-success" style="width:200px;height:80px;font-size:x-large;">Submit</button></center>
           </div>
       </form>
     </div>
+    </center>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

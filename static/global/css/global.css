@@ -1,3 +1,42 @@
+.textarea-opneco{
+    background-color:#282828;
+    color:white;
+    overflow: hidden;
+    border-radius:0%;
+    width: 95%;
+    max-width: 95%;
+    min-width: 95%;
+    height: 400px;
+    resize: none;
+}
+.textarea-opneco:focus{
+    background-color:#282828;
+    color:white;
+    overflow: hidden;
+    width: 95%;
+    max-width: 95%;
+    min-width: 95%;
+    height: 400px;
+}
+.smallinput-opneco{
+    background-color:#282828;
+    color:white;
+    overflow: hidden;
+    border-radius:0%;
+    width: 15%;
+    max-width: 15%;
+    min-width: 15%;
+    resize: none;
+}
+.smallinput-opneco:focus{
+    background-color:#282828;
+    color:white;
+    overflow: hidden;
+    border-radius:0%;
+    width: 15%;
+    max-width: 15%;
+    min-width: 15%;
+}
 li a {
     color: green;
   }
@@ -46,6 +85,7 @@ li a {
   .topnav .icon {
     display: none;
   }
+
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
