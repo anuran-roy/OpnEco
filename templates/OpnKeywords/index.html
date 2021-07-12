@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,11 +17,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    
+<link rel="stylesheet" href="{% static 'global/css/global.css' %}">
+    <title>Home - OpnKeywords</title>
   </head>
   <body>
      
-    <style>
+    <!-- <style>
 	li a {
   color: green;
 }
@@ -92,7 +94,7 @@ body {
     text-align: left;
   }
 }
-    </style>
+    </style> -->
     <div class="topnav" id="myTopnav">
       <a href="../">Home</a>
       <a href="../emo/">OpnEmo</a>
@@ -104,7 +106,7 @@ body {
         <i class="fa fa-bars"></i>
       </a>
     </div>
-<br>
+<!-- <br> -->
     <h1 align="center" style="padding:3%;color:#04AA6D; font-family: 'Bona Nova', serif;">Analyze your text with OpnKeywords keywords checker.</h1>
     <br>
     <div>

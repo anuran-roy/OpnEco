@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,11 +17,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    
+<link rel="stylesheet" href="{% static 'global/css/global.css' %}">
+<title>Home - OpnInsights</title>
   </head>
   <body>
      
-    <style>
+    <!-- <style>
 	li a {
   color: green;
 }
@@ -93,7 +94,7 @@ body {
     text-align: left;
   }
 }
-    </style>
+    </style> -->
     <div class="topnav" id="myTopnav">
       <a href="../">Home</a>
       <a href="../emo/">OpnEmo</a>
@@ -105,8 +106,17 @@ body {
         <i class="fa fa-bars"></i>
       </a>
     </div>
-<br>
+<!-- <br> -->
     <h1 align="center" style="padding:3%;color:#04AA6D; font-family: 'Bona Nova', serif;">Search for trends on terms. Write one term in each line. </h1>
+    <!-- <br> -->
+    <p>
+      Some things to keep in mind:
+      <ol>
+        <li>Don't press the enter button after your last term. You will get a 400 Error.</li>
+        <li>Don't search too many terms together (preferably a maximum of 10), otherwise the results will take a lot of time to load.*</li>
+        <li>If you get a 400 Error, don't panic. Ensure you have followed step 1. If the error still persists, just refresh the page after sometime (say, 5s)</li>
+      </ol>
+    </p>
     <br>
     <div class="form-floating">
       <form action='results/' method='POST'> {% csrf_token %}
@@ -115,7 +125,7 @@ body {
           <label for="floatingInput">Text:</label> -->
           <!-- <br> -->
           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="toAnalyze" style="height:400px;border-radius:0%;background-color:#282828;color:white""></textarea>
-          <label for="floatingTextarea2">Enter Text:</label>
+          <label for="floatingTextarea2">Enter keywords to lookup for:</label>
           <br>
            <br>
            <center><button type="submit" class="btn btn-outline-success" style="width:200px;height:80px;font-size:x-large;">Submit</button></center>

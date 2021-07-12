@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -17,10 +18,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    
+<link rel="stylesheet" href="{% static 'global/css/global.css' %}">
+<title>Home - OpnEmo</title>
   </head>
   <body>
-  <style>
+  <!-- <style>
 	li a {
   color: green;
 }
@@ -92,7 +94,7 @@ body {
     text-align: left;
   }
 }
-    </style>
+    </style> -->
   <div class="topnav" id="myTopnav">
     <a href="../">Home</a>
     <a href="" class="active">OpnEmo</a>
@@ -105,7 +107,7 @@ body {
     </a>
   </div>
 </div>
-<br>
+<!-- <br> -->
     <h1 align="center" style="padding:3%;color:#04AA6D;font-family: 'Bona Nova', serif;">Analyze your text with OpnEmo emotion checker!</h1>
     <br>
     <div class="form-floating">
