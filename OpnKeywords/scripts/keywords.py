@@ -21,7 +21,9 @@ class Keywords:
         return regrex_pattern.sub(r'',text)
 
     def getKeywords(self, text):
+        text = """{}""".format(text)
         text = text.replace(r"\r\n", " ")
+
         datadict={} #Dictionary for dataframe
         xlabels=[] #List for xlabels
 
@@ -33,18 +35,19 @@ class Keywords:
                     cword2=cword.lower()
                     cwlist.append(cword2)
         
-        symbols = u'!@#$%^&*()_+-=|[]\:";<>?,./'
-        
+        symbols = '''!@#$%^&*()_+-=|[]\:"';<>?,./'''
+        text = text.replace("  ", " ")
         for word in text.split(" "):
             worde=self.deEmojify(word)
             wordf=worde.lower()
             word2=wordf.strip(symbols)
             #print(word)
-            if word2 in datadict:
-                datadict[word2]+=1
-            elif word2 not in cwlist:
-                datadict[word2]=1
-                xlabels.append(word2)
+            if not word2.isnumeric():
+                if word2 in datadict:
+                    datadict[word2]+=1
+                elif word2 not in cwlist:
+                    datadict[word2]=1
+                    xlabels.append(word2)
         
         res = {key: val for key, val in sorted(datadict.items(), key = lambda ele: ele[1], reverse = True)} 
         df=pd.DataFrame.from_dict([res])

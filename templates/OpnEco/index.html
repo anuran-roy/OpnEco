@@ -30,7 +30,8 @@
 body {
   background-color:#111;
   color:white;
-font-family: 'Bona Nova', serif;
+/* font-family: 'Bona Nova', serif; */
+font-family: Tahoma, Geneva, Verdana, sans-serif;
 
     /* no-repeat !important; */
 }
@@ -67,7 +68,8 @@ font-family: 'Bona Nova', serif;
     padding: 10px;
     width: 100%;
     }
-    #typewrite1{ 
+    #typewrite1{
+      font-family: 'Bona Nova', serif;
         text-decoration: none;
         align-items: center;
         color:#04AA6D;
@@ -96,7 +98,7 @@ font-family: 'Bona Nova', serif;
         this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        this.el.innerHTML = '<span class="wrap" style="font-family:\'Bona Nova\', serif;">'+this.txt+'</span>';
 
         var that = this;
         var delta = 200 - Math.random() * 100;
@@ -129,7 +131,7 @@ font-family: 'Bona Nova', serif;
         // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff;font-family: 'Bona Nova', serif;}";
         document.body.appendChild(css);
     };
 </script>
