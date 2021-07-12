@@ -22,8 +22,17 @@ class Keywords:
 
     def getKeywords(self, text):
         text = """{}""".format(text)
-        text = text.replace(r"\r\n", " ")
+        text = text.replace(r"\n", " ")
+        text = text.replace(r"\r", " ")
+        text = self.deEmojify(text)
+        text = text.replace("\n", " ")
+        text = text.replace("\r", " ")
+        symbols = '''@#$%^&*()_+-=|[]\:"';<>?,/—’”“:..! '''
+        text = text.replace(symbols, " ")
 
+        while "  " in text:
+            text = text.replace("  ", " ")
+        print(r"{}".format(text))
         datadict={} #Dictionary for dataframe
         xlabels=[] #List for xlabels
 
@@ -34,15 +43,15 @@ class Keywords:
                 for cword in wline.split():
                     cword2=cword.lower()
                     cwlist.append(cword2)
-        
-        symbols = '''!@#$%^&*()_+-=|[]\:"';<>?,./'''
-        text = text.replace("  ", " ")
+
         for word in text.split(" "):
-            worde=self.deEmojify(word)
-            wordf=worde.lower()
-            word2=wordf.strip(symbols)
+            worde = self.deEmojify(word)
+            wordf = worde.lower()
+            word2 = wordf.strip(symbols)
+            word2 = word2.rstrip(symbols)
+            word2 = word2.lstrip(symbols)
             #print(word)
-            if not word2.isnumeric():
+            if not word2.isnumeric() and word2 not in list(symbols): # and not (bool(re.match('^[a-zA-Z0-9]*$', word2))):
                 if word2 in datadict:
                     datadict[word2]+=1
                 elif word2 not in cwlist:
