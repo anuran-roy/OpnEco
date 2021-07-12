@@ -144,7 +144,7 @@ class Checker:
         pt3 = px.bar(x = keys, y = vals, labels={
             "x": "Emotion",
             "y": "Percentage"
-        })
+        }, color_discrete_sequence=["#04aa6d"])
 
         pt3.update_layout({
             'plot_bgcolor': 'rgba(51, 51, 51, 1)',

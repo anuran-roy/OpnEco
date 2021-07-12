@@ -39,7 +39,13 @@ class Trends:
             pt.update_layout({
                         'plot_bgcolor': 'rgba(51, 51, 51, 1)',
                         'paper_bgcolor': 'rgba(51, 51, 51, 1)',
-                    }, font_color="white",)            
+                    }, font_color="white", title={
+                'text': 'Google Trends Data',
+                'y':0.95,
+                'x':0.5,
+                'xanchor': 'center',
+                'yanchor': 'top'
+            })            
             # pt.show()
             fig = plotly.offline.plot(pt, include_plotlyjs=True, output_type='div')
 

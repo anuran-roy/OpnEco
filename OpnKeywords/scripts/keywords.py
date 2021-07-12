@@ -60,7 +60,13 @@ class Keywords:
         pt.update_layout({
             'plot_bgcolor': 'rgba(51, 51, 51, 1)',
             'paper_bgcolor': 'rgba(51, 51, 51, 1)',
-            }, showlegend=False, font_color="white",)
+            }, showlegend=False, font_color="white",title={
+                'text': 'Suggested Keywords (sorted by frequency in decreasing order)',
+                'y':0.95,
+                'x':0.5,
+                'xanchor': 'center',
+                'yanchor': 'top'
+            })
         pt.update_traces(line_color='#04aa6d')
         fig = plotly.offline.plot(pt, include_plotlyjs=True, output_type='div')
 
