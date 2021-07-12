@@ -32,39 +32,13 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-<br>
     <h1 align="center" style="padding:3%;color:#04AA6D; font-family: 'Bona Nova', serif;">Trends for the terms you searched: </h1>
     <br>
     <div class="plot">{{ fig|safe }}</div>
-    <!-- <div class="container">
-      <h2 align="center"><b>Analyzed Text:</b></h2>
-      <img src="../../../generated/images/emotion.jpg" class="img-fluid" alt="emotion-summary" id="emotion-img">
-      <br>
-      <label for="emotion-img">Emotional Analysis Summary</label>
-      <br>
-      <img src="../../../generated/images/emotions-line.jpg" class="img-fluid" alt="emotion-sentencewise-line" id="emotions-line-img">
-      <br>
-      <label for="emotions-line-img">Sentence-wise tone (line plot)</label>
-      <br>
-      <img src="../../../generated/images/emotions-scatter.jpg" class="img-fluid" alt="emotion-sentencewise-scatter" id="emotions-scatter-img">
-      <br>
-      <label for="emotions-scatter-img">Sentence-wise tone (scatter plot)</label>
-      <br>
-    </div> -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-     <script>
-    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-    </script>
+    <script src="{% static 'global/js/global.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
