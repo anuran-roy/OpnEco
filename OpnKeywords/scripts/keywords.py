@@ -32,7 +32,7 @@ class Keywords:
 
         while "  " in text:
             text = text.replace("  ", " ")
-        print(r"{}".format(text))
+        # print(r"{}".format(text))
         datadict={} #Dictionary for dataframe
         xlabels=[] #List for xlabels
 
