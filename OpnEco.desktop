@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=0.2
+Type=Application
+Terminal=true
+Exec=/usr/local/OpnEco/start.sh
+Path=/usr/local/OpnEco
+Name=OpnEco
+Comment=Starts OpnEco
+Icon=/usr/local/OpnEco/static/favicon.ico

@@ -56,13 +56,18 @@
       <li>Can work without Internet (some modules need them though.)</li>
     </ul>
     <br>
-    <h2>Installation and usage:</h2>
+    <h2>Installation:</h2>
     <br>
-    OpnEco doesn't require any installation. You can simply download, resolve its dependencies, and use it. But ensure
-    that you have a proper Internet connection and Python installed and properly configured. Windows users may need to
-    check if Python is added to the <code>PATH</code> environment variable in their systems.
+    <p>OpnEco doesn&#39;t require any lengthy installation process. You can do in any of the following ways:</p>
+    <ol>
+      <li><p>You can simply download, resolve its dependencies, and build it. </p>
+      </li>
+      <li><p>If you are a Windows user, you can run <code>setup.bat</code> by double clicking it. If you are a Linux user, a simple <code>./setup.sh</code> will do.</p>
+      </li>
+    </ol>
+    <p>But ensure that you have a proper Internet connection and Python installed and properly configured. Windows users may need to check if Python is added to the PATH environment variable in their systems.</p>
     <br><br>
-    Steps:
+    <h3>Steps (for those who chose to build it):</h3>
     <ol start="0">
       <li>Download this project code and open the top-level directory.</li>
       <li>Install the Python dependencies using <code>pip install -r requirements.txt</code> (or
@@ -71,6 +76,12 @@
         versions of Python installed.)</li>
       <li>Run <code>manage.py</code> using <code>python manage.py runserver</code> (or
         <code>python3 manage.py runserver</code> if you have two versions of Python installed.)</li>
+    </ol>
+    <br>
+    <h2 id="starting-up-">Starting up:</h2>
+    <ol>
+      <li>If you are a Windows user, you can run <code>start.bat</code> by double clicking it. If you are a Linux user, a simple <code>./start.sh</code> will do.</li>
+      <li>If you built it from scratch, follow steps 0 and 3 above.</li>
     </ol>
     <br>
     <br>
