@@ -34,5 +34,6 @@ But ensure that you have a proper Internet connection and Python installed and p
 
 1. If you are a Windows user, you can run ```start.bat``` by double clicking it. If you are a Linux user, a simple ```./start.sh``` will do.
 2. If you built it from scratch, follow steps 0 and 3 above.
+3. Open ```127.0.0.1:8000``` or ```localhost:8000``` on your browser if you have installed with default settings.
 
 Made by [Anuran](https://github.com/anuran-roy) and [Tisha](https://github.com/tishachawla-jg) with 💙
