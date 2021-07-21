@@ -9,7 +9,34 @@ We all have been there, haven't we?
 
 OpnEco is a Python3 project developed just for that. To be a constant companion throughout your content writing process. By content writers, for content writers.
 
-## Salient features:
+## Salient Features:
+
+### Interactive Graphs
+
+<br><br>
+![OpnInsights](https://user-images.githubusercontent.com/76481787/126541996-323a5973-0fe9-4c05-90e0-2e69473b1f9f.png)
+
+<br><br><br>
+### Easy to use
+
+<br><br>
+![OpnEco Main menu](https://user-images.githubusercontent.com/76481787/126542607-2f855d6c-24b0-4745-a948-1d100490fc54.png)
+
+<br><br><br>
+### Can work offline (except for some modules)
+
+<br><br>
+![image](https://user-images.githubusercontent.com/76481787/126545850-b06cfb6e-913b-45d4-84f0-9f46f531c8c0.png)
+
+<br><br><br>
+### FREE and Open Source
+
+<br><br>
+![image](https://user-images.githubusercontent.com/76481787/126544431-66ab9149-80f2-46c6-9ac1-05a7457ba504.png)
+<!-- ![image](https://user-images.githubusercontent.com/76481787/126543509-7965b113-3e13-4d28-9390-ed100b269b6b.png) -->
+
+
+## Other features:
 
 1. Hassle-free installation
 2. Can work without Internet (some modules need them though.)
