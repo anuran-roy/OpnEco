@@ -3,8 +3,11 @@
 ![Codacy branch grade](https://img.shields.io/codacy/grade/6d8da48b93414bf785054ebfcec1ee57/main?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/anuran-roy/OpnEco?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/anuran-roy/OpnEco?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/anuran-roy/OpnEco?style=for-the-badge)
+![Lines of code](https://img.shields.io/tokei/lines/github/anuran-roy/OpnEco?style=for-the-badge)
+![Website](https://img.shields.io/website?down_color=red&down_message=down&style=for-the-badge&up_color=green&up_message=up&url=https%3A%2F%2Fanuran-roy.github.io%2FOpnEco%2F)
 
-![image](https://user-images.githubusercontent.com/76481787/129911115-6755be83-fd17-46ac-9c5f-5e3c1aa4ce93.png)
+[![image](https://user-images.githubusercontent.com/76481787/129911115-6755be83-fd17-46ac-9c5f-5e3c1aa4ce93.png)](https://anuran-roy.github.io/OpnEco)
 ## What is OpnEco?
 
 "Ah, if only I could get someone to read this for feedback."

@@ -1,3 +1,4 @@
+.gitignore
 bin/**
 etc/**
 lib/**
