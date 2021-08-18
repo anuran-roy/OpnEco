@@ -1,6 +1,7 @@
-![image](https://user-images.githubusercontent.com/76481787/129911115-6755be83-fd17-46ac-9c5f-5e3c1aa4ce93.png)
 # OpnEco: The FOSS companion of content writers.
+![GitHub Repo stars](https://img.shields.io/github/stars/anuran-roy/OpnEco?style=for-the-badge)
 
+![image](https://user-images.githubusercontent.com/76481787/129911115-6755be83-fd17-46ac-9c5f-5e3c1aa4ce93.png)
 ## What is OpnEco?
 
 "Ah, if only I could get someone to read this for feedback."
