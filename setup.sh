@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Installing OpnEco..."
 echo "Step 1/5: Copying files to /usr/local/OpnEco..."
 sudo mkdir /usr/local/OpnEco
