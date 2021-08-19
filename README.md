@@ -9,6 +9,7 @@
 <br><br>
 <a href="https://www.producthunt.com/posts/opneco?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-opneco" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=309101&theme=dark" alt="OpnEco - A companion for content writers, by content writers. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9ccf6e0eb2de4ac88f82e252ce40ec5c)](https://app.codacy.com/gh/anuran-roy/OpnEco?utm_source=github.com&utm_medium=referral&utm_content=anuran-roy/OpnEco&utm_campaign=Badge_Grade_Settings)
 [![image](https://user-images.githubusercontent.com/76481787/129911115-6755be83-fd17-46ac-9c5f-5e3c1aa4ce93.png)](https://anuran-roy.github.io/OpnEco)
 ## What is OpnEco?
 
