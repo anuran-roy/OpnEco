@@ -1,6 +1,0 @@
-.gitignore
-bin/**
-etc/**
-lib/**
-share/**
-pyvenv.cfg

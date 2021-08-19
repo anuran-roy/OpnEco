@@ -6,6 +6,8 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/anuran-roy/OpnEco?style=for-the-badge)
 ![Lines of code](https://img.shields.io/tokei/lines/github/anuran-roy/OpnEco?style=for-the-badge)
 ![Website](https://img.shields.io/website?down_color=red&down_message=down&style=for-the-badge&up_color=green&up_message=up&url=https%3A%2F%2Fanuran-roy.github.io%2FOpnEco%2F)
+<br><br>
+<a href="https://www.producthunt.com/posts/opneco?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-opneco" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=309101&theme=dark" alt="OpnEco - A companion for content writers, by content writers. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 [![image](https://user-images.githubusercontent.com/76481787/129911115-6755be83-fd17-46ac-9c5f-5e3c1aa4ce93.png)](https://anuran-roy.github.io/OpnEco)
 ## What is OpnEco?
