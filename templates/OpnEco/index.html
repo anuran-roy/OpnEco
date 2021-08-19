@@ -1,236 +1,267 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="{% static 'global/css/global.css' %}">
-    <link rel="stylesheet" href="{% static 'OpnEco/css/style.css' %}">
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
-    <title>Home - OpnEco</title>
-  </head>
-    <style>
-	li a {
-  color: green;
-}
-body {
-  background-color:#111;
-  color:white;
-/* font-family: 'Bona Nova', serif; */
-font-family: Tahoma, Geneva, Verdana, sans-serif;
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'global/css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'OpnEco/css/style.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+  <title>Home - OpnEco</title>
+</head>
+<style>
+  li a {
+    color: green;
+  }
+
+  body {
+    background-color: #111;
+    color: white;
+    /* font-family: 'Bona Nova', serif; */
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
 
     /* no-repeat !important; */
-}
+  }
 
-/* #text{
+  /* #text{
   width: 70%;
   align-items: center;
 } */
-/* Add a black background color to the top navigation */
+  /* Add a black background color to the top navigation */
 
-    .grid {
-    margin: 15px; 
+  .grid {
+    margin: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     align-items: fill;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .grid > article {
+  }
+
+  .grid>article {
     border: 1px solid #ccc;
-    border-radius:5%;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-    }
-    .grid > article img {
+    border-radius: 5%;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .grid>article img {
     max-width: 100%;
-    }
-    .text {
+  }
+
+  .text {
     padding: 0 20px 20px;
-    }
-    .text > button {
+  }
+
+  .text>button {
     background: gray;
     border: 0;
     color: white;
     padding: 10px;
     width: 100%;
-    }
-    #typewrite1{
-      font-family: 'Bona Nova', serif;
-        text-decoration: none;
-        align-items: center;
-        color:#04AA6D;
-    
-        font-size: 40px;
-    }
+  }
+
+  #typewrite1 {
+    font-family: 'Bona Nova', serif;
+    text-decoration: none;
+    align-items: center;
+    color: #04AA6D;
+
+    font-size: 40px;
+  }
 </style>
 <script type="text/javascript">
-    var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+  var TxtType = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+  TxtType.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
 
-        this.el.innerHTML = '<span class="wrap" style="font-family:\'Bona Nova\', serif;">'+this.txt+'</span>';
+    this.el.innerHTML = '<span class="wrap" style="font-family:\'Bona Nova\', serif;">' + this.txt + '</span>';
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+    var that = this;
+    var delta = 200 - Math.random() * 100;
 
-        if (this.isDeleting) { delta /= 2; }
+    if (this.isDeleting) { delta /= 2; }
 
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
 
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
 
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff;font-family: 'Bona Nova', serif;}";
-        document.body.appendChild(css);
-    };
+  window.onload = function () {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-type');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff;font-family: 'Bona Nova', serif;}";
+    document.body.appendChild(css);
+  };
 </script>
-  <body>
+
+<body>
   <div class="topnav" id="myTopnav">
-  <a href="" class="active">Home</a>
-  <a href="emo/">OpnEmo</a>
-  <a href="insights/">OpnInsights</a>
-  <a href="keywords/">OpnKeywords</a>
-  <a href="settings/">Settings</a>
-  <a href="about/">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-<br>
-    <br>
-    <!-- <h1>Hello there! Welcome to OpnEco</h1> -->
-    <h1 align="center">
-        <a href="" class="typewrite" data-period="2000" data-type='[ "Hey there!", "Welcome to OpnEco.", "Analyze your content using the various tools.", "It is 100% free!" ]' id="typewrite1">
-          <span class="wrap"></span>
-        </a>
-    </h1>
-    <br>
-    <br>
-    <h3 align="center" style="color:gray">Where to go from here?</h3>
-    <br>
-    <br>
-    <style>
-        article{
-            transition: 0.3s;
-            overflow: hidden;
-        }
-        article:hover{
-            background-color: #282828;
-            transform: scale(1.02);
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        a:hover{
-            color: white;
-        }
-        button{
-            transition: 0.3s;
-            overflow: hidden;
-        }
-        button:hover{
-            background-color: #04AA6D;/*rgb(2, 111, 236);*/
-            transform: scale(1.05);
-            font-color: white;
-        }
-        .card-img{
-            margin: 10px; /*top 10px left 10px bottom 10px right;*/
-            height: 300px;
-            width: 300px;
-        }
-        
-    </style>
-    <main class="grid">
+    <a href="" class="active">Home</a>
+    <a href="emo/">OpnEmo</a>
+    <a href="insights/">OpnInsights</a>
+    <a href="keywords/">OpnKeywords</a>
+    <a href="settings/">Settings</a>
+    <a href="about/">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <br>
+  <br>
+  <!-- <h1>Hello there! Welcome to OpnEco</h1> -->
+  <h1 align="center">
+    <a href="" class="typewrite" data-period="2000"
+      data-type='[ "Hey there!", "Welcome to OpnEco.", "Analyze your content using the various tools.", "It is 100% free!" ]'
+      id="typewrite1">
+      <span class="wrap"></span>
+    </a>
+  </h1>
+  <br>
+  <br>
+  <h3 align="center" style="color:gray">Where to go from here?</h3>
+  <br>
+  <br>
+  <style>
+    article {
+      transition: 0.3s;
+      overflow: hidden;
+    }
+
+    article:hover {
+      background-color: #282828;
+      transform: scale(1.02);
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    button {
+      transition: 0.3s;
+      overflow: hidden;
+    }
+
+    button:hover {
+      background-color: #04AA6D;
+      /*rgb(2, 111, 236);*/
+      transform: scale(1.05);
+      font-color: white;
+    }
+
+    .card-img {
+      margin: 10px;
+      /*top 10px left 10px bottom 10px right;*/
+      height: 300px;
+      width: 300px;
+    }
+  </style>
+  <main class="grid">
     <article>
-        <center><img src="{% static 'OpnEco/media/OpnEmo-card-img.svg' %}" alt="OpnEco" class="card-img" align="center"></center>
-        <div class="text">
+      <center><img src="{% static 'OpnEco/media/OpnEmo-card-img.svg' %}" alt="OpnEco" class="card-img" align="center">
+      </center>
+      <div class="text">
         <h3 style="text-align:center;padding:2%;color:gray;color:#04AA6D">OpnEmo</h3>
         <p>Want to know how your readers will find your content to read? OpnEmo has got you covered.</p>
-        <button><a href="emo/"><div>Let's Go</div></a></button>
-        </div>
+        <button><a href="emo/">
+            <div>Let's Go</div>
+          </a></button>
+      </div>
     </article>
     <article>
-        <center><img src="{% static 'OpnEco/media/OpnInsights-card-img.svg' %}" alt="OpnInsights" class="card-img" align="center"></center>
-        <div class="text">
+      <center><img src="{% static 'OpnEco/media/OpnInsights-card-img.svg' %}" alt="OpnInsights" class="card-img"
+          align="center"></center>
+      <div class="text">
         <h3 style="text-align:center;padding:2%;color:gray;color:#04AA6D">OpnInsights*</h3>
         <p>Stuck between choosing topics to target next to boost your audience? Try OpnInsights.</p>
-        <button><a href="insights/"><div>Let's Go</div></a></button>
-        </div>
+        <button><a href="insights/">
+            <div>Let's Go</div>
+          </a></button>
+      </div>
     </article>
     <article>
-        <center><img src="{% static 'OpnEco/media/OpnKeywords-card-img.svg' %}" alt="OpnKeywords" class="card-img"></center>
-        <div class="text">
+      <center><img src="{% static 'OpnEco/media/OpnKeywords-card-img.svg' %}" alt="OpnKeywords" class="card-img">
+      </center>
+      <div class="text">
         <h3 style="text-align:center;padding:2%;color:gray;color:#04AA6D">OpnKeywords</h3>
         <p>Puzzled between choosing keywords to target for your content? OpnKeywords can help.</p>
-        <button><a href="keywords/"><div>Let's Go</div></a></button>
-        </div>
+        <button><a href="keywords/">
+            <div>Let's Go</div>
+          </a></button>
+      </div>
     </article>
-    </main>
-    <p align="right">
-        * : Requires Internet Access.
-    </p>
-    <!-- Optional JavaScript; choose one of the two! -->
+  </main>
+  <p align="right">
+    * : Requires Internet Access.
+  </p>
+  <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>

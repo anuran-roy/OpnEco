@@ -3,3 +3,7 @@ etc/**
 lib/**
 share/**
 pyvenv.cfg
+OpnTranscribe/scripts/model/**
+OpnTranscribe/scripts/vosk-api/**
+OpnTranscribe/**
+templates/OpnTranscribe/**

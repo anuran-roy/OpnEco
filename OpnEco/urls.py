@@ -23,6 +23,7 @@ urlpatterns = [
     path('emo/', include('OpnEmo.urls')),
     path('keywords/', include('OpnKeywords.urls')),
     path('insights/', include('OpnInsights.urls')),
+    path('transcribe/', include('OpnTranscribe.urls')),
     path('settings/', views.settings),
     path('about/', views.about),
 ]

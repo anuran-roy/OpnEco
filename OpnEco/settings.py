@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from django.conf import global_settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'OpnTranscribe.apps.OpntranscribeConfig',
     'OpnEmo.apps.OpnemoConfig',
     'OpnKeywords.apps.OpnkeywordsConfig',
     'OpnInsights.apps.OpninsightsConfig',
@@ -127,3 +130,10 @@ STATICFILES_DIRS = [BASE_DIR / "static/"]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# global_settings.TEMPLATE_CONTEXT_PROCESSORS += (
+#     "myapp.processor.foos",
+# )
