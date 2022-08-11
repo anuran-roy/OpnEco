@@ -2,7 +2,7 @@ asgiref==3.4.1
 certifi==2021.5.30
 chardet==4.0.0
 click==8.0.1
-Django==3.2.5
+Django==3.2.15
 emoji==1.2.0
 idna==2.10
 joblib==1.0.1
