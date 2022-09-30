@@ -5,7 +5,7 @@ click==8.0.1
 Django==3.2.5
 emoji==1.2.0
 idna==2.10
-joblib==1.0.1
+joblib==1.2.0
 lxml==4.6.3
 nltk==3.6.2
 numpy==1.21.0
